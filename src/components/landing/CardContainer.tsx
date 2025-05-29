@@ -29,7 +29,7 @@ export default function CardContainer({
 
                 <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-30">
                     <img
-                        className="md:h-72 h-56 rounded-full object-cover shadow-lg"
+                        className="md:h-72 h-56 2xl:h-80 rounded-full object-cover shadow-lg"
                         src={profilePhotoUrl}
                         alt="Foto de perfil"
                     />

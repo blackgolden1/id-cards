@@ -32,7 +32,7 @@ export default function Company({address, company_description2, image1, image2, 
                         ))}
                     </ul>
                 </div>
-                <div className="flex md:h-[25rem] gap-1 bg-white pt-1 h-[10rem]">
+                <div className="flex md:h-[25rem] gap-1 bg-white pt-1 h-[10rem] 2xl:h-[43rem]">
                     <img className="w-1/4" src="/image1.jpg" alt=""/>
                     <img className="w-1/4" src="/image2.jpg" alt=""/>
                     <img className="w-1/4" src="/image3.jpg" alt=""/>

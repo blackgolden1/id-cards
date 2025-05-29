@@ -16,10 +16,10 @@
 }
 @layer base {
   .heading {
-    @apply text-3xl md:text-4xl;
+    @apply 2xl:text-[3.2rem] text-[1.8rem] md:text-[2.4rem];
   }
   .paragraph {
-    @apply md:text-3xl text-2xl;
+    @apply 2xl:text-[2.4rem] md:text-[1.8rem] text-[1.4rem];
   }
 }
 body {
