@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Gunjala+Gondi:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');@tailwind base;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Gunjala+Gondi:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 @tailwind components;
 @tailwind utilities;
-
+@tailwind base;
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -13,10 +14,18 @@
     --foreground: #ededed;
   }
 }
-
+@layer base {
+  .heading {
+    @apply text-3xl md:text-4xl;
+  }
+  .paragraph {
+    @apply md:text-3xl text-2xl;
+  }
+}
 body {
   width: 100vw;
   color: var(--foreground);
   background: var(--background);
   font-family: 'Josefin Sans', sans-serif;
+  overflow-x: hidden;
 }

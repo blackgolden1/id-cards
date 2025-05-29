@@ -21,31 +21,30 @@ export default function CardContainer({
                                           website,
                                       }: CardContainerProps) {
     return (
-        <section className="text-center my-8 pb-12 px-4">
-            <h2 className="text-3xl bg-primary text-white rounded-2xl py-3 px-6 w-fit mb-20 mx-auto">
+        <section className="text-center my-8 pb-12 px-4 ">
+            <h2 className="heading bg-primary text-white rounded-2xl py-3 px-6 w-fit mb-20 mx-auto">
                 Descargar tarjeta virtual
             </h2>
             <div className="relative w-full max-w-xl mx-auto border-8 border-primary rounded-[4rem] bg-white overflow-visible pb-8">
 
-                {/* Imagen superpuesta */}
                 <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 z-30">
                     <img
-                        className="h-72 rounded-full object-cover shadow-lg"
+                        className="md:h-72 h-56 rounded-full object-cover shadow-lg"
                         src={profilePhotoUrl}
                         alt="Foto de perfil"
                     />
                 </div>
 
                 {/* Contenido principal */}
-                <div className="pt-52 px-6 text-center space-y-8 ">
+                <div className="md:pt-52 pt-32 md:px-6 px-4 text-center space-y-8 ">
 
-                    <div className="pt-12 text-center bg-primary text-white rounded-3xl shadow-lg z-20 relative px-6 w-3/5 pb-2 mx-auto">
-                        <p className="text-4xl font-semibold mb-2 font-roboto">Tarjeta virtual</p>
-                        <p className="text-4xl">{firstName}</p>
-                        <p className="text-4xl">{lastName}</p>
+                    <div className="pt-12 text-center bg-primary text-white rounded-3xl shadow-lg z-20 relative md:px-12 px-8 w-fit pb-2 mx-auto">
+                        <p className="heading font-semibold mb-2 font-roboto">Tarjeta virtual</p>
+                        <p className="heading">{firstName}</p>
+                        <p className="heading">{lastName}</p>
                     </div>
 
-                    <div className="mx-auto w-fit">
+                    <div className="w-fit flex items-center mx-auto">
                         <Card
                             firstName={firstName}
                             lastName={lastName}
@@ -55,7 +54,7 @@ export default function CardContainer({
                             website={website}
                         />
                     </div>
-                    <h2 className="text-2xl bg-primary text-white rounded-2xl py-3 px-6 w-fit mb-16 mx-auto">
+                    <h2 className="md:text-2xl text-xl bg-primary text-white rounded-2xl py-3 px-6 w-fit mb-16 mx-auto">
                         Escanea codigo QR
                     </h2>
                 </div>
