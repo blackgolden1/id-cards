@@ -1,15 +1,21 @@
-import {landingData} from '@/lib/dummyData';
-import {notFound} from 'next/navigation';
-import {Header, Company, Portfolio, CardContainer} from '@/components/landing';
-import {sharedCompanyData} from '@/lib/dummyData';
+import { landingData, sharedCompanyData } from '@/lib/dummyData';
+import { notFound } from 'next/navigation';
+import { Header, Company, Portfolio, CardContainer } from '@/components/landing';
+// type Params = {
+//     id: string;
+// };
+//
+// type Props = {
+//     params: Params;
+// };
 
-interface Props {
-    params: {
-        id: string;
-    };
-}
-export default function LandingPage({ params }: Props) {
+export default async function LandingPage(props: {params: Promise<{id: string}>;}) {
+    const params = await props.params;
     const employeeData = landingData[params.id];
+
+
+// export default function LandingPage({ params }: Props) {
+//     const employeeData = landingData[params.id];
 
     if (!employeeData) return notFound();
 
@@ -37,10 +43,6 @@ export default function LandingPage({ params }: Props) {
                 <Company
                     company_description2={sharedCompanyData.company_description2}
                     address={sharedCompanyData.address}
-                    image1={sharedCompanyData.image1}
-                    image2={sharedCompanyData.image2}
-                    image3={sharedCompanyData.image3}
-                    image4={sharedCompanyData.image4}
                 />
             </div>
             <div className="w-screen">

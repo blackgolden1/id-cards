@@ -2,10 +2,6 @@
 interface AboutProps {
     company_description2: string;
     address: Address[];
-    image1: string;
-    image2: string;
-    image3: string;
-    image4: string;
 }
 
 interface Address {
@@ -13,7 +9,7 @@ interface Address {
     description: string;
 }
 
-export default function Company({address, company_description2, image1, image2, image3, image4}: AboutProps) {
+export default function Company({address, company_description2}: AboutProps) {
     return (
         <section>
             <div className="md:px-24 px-4 bg-gray-100 pt-8 pb-20">
