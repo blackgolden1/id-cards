@@ -56,7 +56,7 @@ export const landingData: Record<string, {
     youtubeUrl: string;
 
 }> = {
-    claudia: {
+    'claudia-paola-bonilla-ordonez': {
         firstName: "Claudia Paola",
         lastName: "Bonilla Ordoñezz",
         organization: "Asesora Comercial Externa Junior Sede IBG",
@@ -75,7 +75,7 @@ export const landingData: Record<string, {
 
     },
 
-    geraldine: {
+    'geraldine-galindo-bedoya': {
         firstName: "Geraldine",
         lastName: "Galindo Bedoya",
         organization: "Asesora Comercial Externa Semi Senior Sede IBG",
@@ -93,7 +93,7 @@ export const landingData: Record<string, {
         youtubeUrl: "https://www.youtube.com/channel/UCh3N_GIgYNX5Qix4EQ6ZjKg",
 
     },
-    sandra: {
+    'sandra-lorena-sanchez-bonilla': {
         firstName: "Sandra Lorena",
         lastName: "Sanchez Bonilla",
         organization: "Coordinadora Administrativa y Comercial Sede BAQ",
@@ -112,7 +112,7 @@ export const landingData: Record<string, {
 
 
     },
-    daniel: {
+    'daniel-alberto-perez-garzon': {
         firstName: "Daniel Alberto",
         lastName: "Pérez Garzón",
         organization: "Ejecutivo Gestión Comercial Zona Norte - Sede BAQ",
