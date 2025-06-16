@@ -48,6 +48,17 @@ export default async function LandingPage({ params }: Props) {
     return (
         <main className="min-h-screen w-full overflow-x-hidden py-6 space-y-8 bg-white">
             <div className="w-screen">
+                <CardContainer
+                    profilePhotoUrl={employeeData.profilePhotoUrl}
+                    firstName={employeeData.firstName}
+                    lastName={employeeData.lastName}
+                    phone={employeeData.phoneCard}
+                    email={employeeData.email}
+                    rol={employeeData.rol}
+                    website={employeeData.website}
+                />
+            </div>
+            <div className="w-screen">
                 <Header
                     name={employeeData.fullName}
                     profilePhotoUrl={employeeData.profilePhotoUrl}
@@ -71,17 +82,7 @@ export default async function LandingPage({ params }: Props) {
                     address={sharedCompanyData.address}
                 />
             </div>
-            <div className="w-screen">
-                <CardContainer
-                    profilePhotoUrl={employeeData.profilePhotoUrl}
-                    firstName={employeeData.firstName}
-                    lastName={employeeData.lastName}
-                    phone={employeeData.phoneCard}
-                    email={employeeData.email}
-                    rol={employeeData.rol}
-                    website={employeeData.website}
-                />
-            </div>
+           
         </main>
     );
 }
