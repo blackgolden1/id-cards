@@ -6,7 +6,7 @@ import { QRCodeSVG } from 'qrcode.react';
 interface VCardQRProps {
     firstName: string;
     lastName: string;
-    organization?: string;
+    rol?: string;
     phone: string;
     email: string;
     website?: string;
@@ -15,7 +15,7 @@ interface VCardQRProps {
 export default function VCardQR({
                                     firstName,
                                     lastName,
-                                    organization = '',
+                                    rol = '',
                                     phone,
                                     email,
                                     website = '',
@@ -25,7 +25,7 @@ BEGIN:VCARD
 VERSION:3.0
 N:${lastName};${firstName};;;
 FN:${firstName} ${lastName}
-ORG:${organization}
+ORG:${rol}
 TEL;TYPE=cell:${phone}
 EMAIL:${email}
 ${website ? `URL:${website}` : ''}

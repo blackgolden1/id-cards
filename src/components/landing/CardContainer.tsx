@@ -7,7 +7,7 @@ interface CardContainerProps {
     lastName: string;
     phone: string;
     email: string;
-    organization?: string;
+    rol?: string;
     website?: string;
 }
 
@@ -17,7 +17,7 @@ export default function CardContainer({
                                           lastName,
                                           phone,
                                           email,
-                                          organization,
+                                          rol,
                                           website,
                                       }: CardContainerProps) {
     return (
@@ -50,7 +50,7 @@ export default function CardContainer({
                             lastName={lastName}
                             phone={phone}
                             email={email}
-                            organization={organization}
+                            rol={rol}
                             website={website}
                         />
                     </div>

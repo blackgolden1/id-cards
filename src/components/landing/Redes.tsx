@@ -11,7 +11,7 @@ export default function Redes({ name, url, icon }: Network) {
         <div className="rounded-full p-1 w-fit ">
             <img src={icon} alt="" className="md:w-[7rem] w-[3rem]"/>
         </div>
-        <h3 className="text-center md:text-2xl 2xl:text-3xl">{name}</h3>
+        <h3 className="text-center md:text-2xl 2xl:text-3xl text-black">{name}</h3>
     </a>
 </section>
     )

@@ -13,7 +13,7 @@ export default function Company({address, company_description2}: AboutProps) {
     return (
         <section>
             <div className="md:px-24 px-4 bg-gray-100 pt-8 pb-20">
-                <h2 className="heading font-semibold mb-12 text-center font-roboto w-full">Politica Empresarial</h2>
+                <h2 className="heading font-semibold mb-12 text-center font-roboto w-full text-black">Politica Empresarial</h2>
                 <p className="text-black text-justify paragraph px-2 md:px-0">{company_description2}</p>
             </div>
             <div className="bg-primary text-white text-center mb-4 pt-20">

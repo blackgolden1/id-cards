@@ -1,15 +1,52 @@
-import { landingData, sharedCompanyData } from '@/lib/dummyData';
-import { notFound } from 'next/navigation';
+import landingData, { sharedCompanyData } from '@/lib/dummyData';
+import { Employee } from '@/types/Employee';
 import { Header, Company, Portfolio, CardContainer } from '@/components/landing';
+// export async function generateStaticParams() {
+//     return Object.keys(landingData).map(id => ({ id }));
+// }
+// export default async function LandingPage(props: { params: Promise<{ id: string }> }) {
+//     const { id } = await props.params;
+//     const employeeData = landingData[id];
 
-export default async function LandingPage(props: {params: Promise<{id: string}>;}) {
-    const params = await props.params;
-    const employeeData = landingData[params.id];
 
-    if (!employeeData) return notFound();
+// type Props = {
+//   params: {
+//     id: string;
+//   };
+// };
+
+// export function generateStaticParams() {
+//   return Object.keys(landingData).map((id) => ({
+//     id,
+//   }));
+// }
+
+// export default function LandingPage({ params }: Props) {
+//   const employeeData: Employee | undefined = landingData[params.id];
+
+type Props = {
+  params: Promise<{ id: string }>; // 👈 tipo obligatorio para evitar error de build
+};
+
+export function generateStaticParams() {
+  return Object.keys(landingData).map((id) => ({ id }));
+}
+
+export default async function LandingPage({ params }: Props) {
+  const { id } = await params; // 👈 obligatorio para evitar el error del runtime
+
+  const employeeData: Employee | undefined = landingData[id];
+ if (!employeeData) {
+  return (
+    <div className="text-center p-10">
+      <h1 className="text-4xl font-bold text-red-600">Página no encontrada</h1>
+      <p className="mt-4">Lo sentimos, la tarjeta solicitada no existe.</p>
+    </div>
+  );
+}
 
     return (
-        <main className="min-h-screen w-full overflow-x-hidden py-6 space-y-8">
+        <main className="min-h-screen w-full overflow-x-hidden py-6 space-y-8 bg-white">
             <div className="w-screen">
                 <Header
                     name={employeeData.fullName}
@@ -41,7 +78,7 @@ export default async function LandingPage(props: {params: Promise<{id: string}>;
                     lastName={employeeData.lastName}
                     phone={employeeData.phoneCard}
                     email={employeeData.email}
-                    organization={employeeData.organization}
+                    rol={employeeData.rol}
                     website={employeeData.website}
                 />
             </div>
