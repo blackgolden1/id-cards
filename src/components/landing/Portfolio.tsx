@@ -8,9 +8,13 @@ interface Project {
   phone: string;
   youtubeUrl: string;
   companyLogo: string;
+
+  company_description1: string;
 }
 
 export default function Portfolio({
+
+  company_description1,
   whspUrl,
   facebookUrl,
   emailUrl,
@@ -29,29 +33,41 @@ export default function Portfolio({
   ];
 
   return (
-    <section className="md:px-36 px-8 mx-auto">
-      <a href="/brochure.pdf" target="_blank" rel="noopener noreferrer" className="w-fit">
-        <h2 className="heading bg-primary text-white rounded-2xl py-3 md:px-6 px-2 w-fit mx-auto text-center">
-          Portafolio de servicios
-        </h2>
-      </a>
-      <div className="grid grid-cols-3 md:my-16 my-8 gap-12 w-full mx-auto place-items-center">
-        {networks.map((network) => (
-          <Network
-            key={network.name}
-            name={network.name}
-            url={network.url}
-            icon={network.icon}
-          />
-        ))}
-      </div>
+    <section>
+      <header className="text-center w-fit mb-4">
+        <p className="paragraph bg-primary text-white w-screen py-6 md:px-8 px-4 ">
+          {company_description1}
+        </p>
+      </header>
+      <div className="md:px-36 px-8 mx-auto">
+        <a
+          href="/brochure.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-fit"
+        >
+          <h2 className="heading bg-primary text-white rounded-2xl py-3 md:px-6 px-2 w-fit mx-auto text-center">
+            Portafolio de servicios
+          </h2>
+        </a>
+        <div className="grid grid-cols-3 md:my-16 my-8 gap-12 w-full mx-auto place-items-center">
+          {networks.map((network) => (
+            <Network
+              key={network.name}
+              name={network.name}
+              url={network.url}
+              icon={network.icon}
+            />
+          ))}
+        </div>
 
-      <img
-        className="mx-auto"
-        src={companyLogo}
-        alt="Logo de la empresa"
-        width={400}
-      />
+        <img
+          className="mx-auto"
+          src={companyLogo}
+          alt="Logo de la empresa"
+          width={400}
+        />
+      </div>
     </section>
   );
 }

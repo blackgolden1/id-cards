@@ -14,7 +14,6 @@ export default function Header({ name, profilePhotoUrl, company_description1 }: 
                 alt={`Foto de ${name}`}
                 className="mx-auto rounded-full h-[20rem] 2xl:h-[30rem] object-cover shadow-md md:mb-12 mb-6"
             />
-            <p className="paragraph bg-primary text-white w-screen py-6 md:px-8 px-4 ">{company_description1}</p>
 
         </header>
     );

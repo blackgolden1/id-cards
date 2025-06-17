@@ -21,7 +21,7 @@ export default function CardContainer({
                                           website,
                                       }: CardContainerProps) {
     return (
-        <section className="text-center my-8 pb-12 px-4 ">
+        <section className="text-center my-2 pb-4 px-4 ">
             <h2 className="heading bg-primary text-white rounded-2xl py-3 px-6 w-fit mb-20 mx-auto">
                 Descargar tarjeta virtual
             </h2>
