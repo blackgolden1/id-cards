@@ -46,7 +46,7 @@ export const sharedCompanyData = {
 const landingData: Record<string, Employee> = {
   "claudia-paola-bonilla-ordonez": {
     firstName: "Claudia Paola",
-    lastName: "Bonilla Ordoñezz",
+    lastName: "Bonilla Ordoñez",
     rol: "Asesora Comercial Externa Junior Sede IBG",
     phoneCard: "3173643058",
     email: "asesor6@edelco.co",

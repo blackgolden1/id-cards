@@ -5,7 +5,7 @@ interface HeaderProps {
     company_description1: string;
 }
 
-export default function Header({ name, profilePhotoUrl, company_description1 }: HeaderProps) {
+export default function Header({ name, profilePhotoUrl}: HeaderProps) {
     return (
         <header className="text-center w-fit">
             <h1 className="text-primary font-black md:text-8xl 2xl:text-9xl text-5xl md:px-[10rem] px-2 mb-8">{name}</h1>

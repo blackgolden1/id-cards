@@ -2,7 +2,7 @@
 import landingData, { sharedCompanyData } from "@/lib/dummyData";
 import { Employee } from "@/types/Employee";
 import {
-  Header,
+  
   Company,
   Portfolio
 } from "@/components/landing";
