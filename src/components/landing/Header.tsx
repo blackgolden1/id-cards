@@ -7,7 +7,7 @@ interface HeaderProps {
 
 export default function Header({ name, profilePhotoUrl}: HeaderProps) {
     return (
-        <header className="text-center w-fit">
+        <header className="text-center w-full">
             <h1 className="text-primary font-black md:text-8xl 2xl:text-9xl text-5xl md:px-[10rem] px-2 mb-8">{name}</h1>
             <img
                 src={profilePhotoUrl}

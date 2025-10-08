@@ -45,10 +45,7 @@ export default function Company({ address, company_description2 }: AboutProps) {
           <img className="w-1/4" src="/image4.jpg" alt="" />
         </div>
       </div>
-      <a href="https://blackgolden.co/" target="_blank" className="w-fit">
-    
-        <p className="text-center mx-auto "> &copy; Black Golden 2025</p>
-      </a>
+     
     </section>
   );
 }

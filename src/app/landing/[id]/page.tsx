@@ -1,13 +1,11 @@
 
 import landingData, { sharedCompanyData } from "@/lib/dummyData";
 import { Employee } from "@/types/Employee";
-import {
-  
-  Company,
-  Portfolio
-} from "@/components/landing";
+import {Company, Portfolio, } from "@/components/landing";
+import QRCodeRedirect from "@/components/landing/QRCodeRedirect";
 import FlipCard from '@/components/landing/FlipCard';
-
+import '../../../styles/globals.css'; // Import global styles
+// ...existing code...
 type Props = {
   params: Promise<{ id: string }>;
 };
@@ -61,6 +59,9 @@ export default async function LandingPage({ params }: Props) {
           company_description2={sharedCompanyData.company_description2}
           address={sharedCompanyData.address}
         />
+      </div>
+      <div className="w-screen">
+      <QRCodeRedirect employeeData={employeeData} id={id}/>
       </div>
     </main>
   );
