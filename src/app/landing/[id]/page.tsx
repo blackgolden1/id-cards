@@ -1,11 +1,8 @@
 
-import landingData, { sharedCompanyData } from "@/lib/dummyData";
-import { Employee } from "@/types/Employee";
-import {Company, Portfolio, } from "@/components/landing";
-import QRCodeRedirect from "@/components/landing/QRCodeRedirect";
-import FlipCard from '@/components/landing/FlipCard';
+import { landingData } from "@/lib/dummyData";
+import { Countdown, EventDetails, HeroSection, RSVP } from "@/components/landing";
 import '../../../styles/globals.css'; // Import global styles
-// ...existing code...
+
 type Props = {
   params: Promise<{ id: string }>;
 };
@@ -17,14 +14,14 @@ export function generateStaticParams() {
 export default async function LandingPage({ params }: Props) {
   const { id } = await params;
 
-  const employeeData: Employee | undefined = landingData[id];
-  if (!employeeData) {
+  const eventData = landingData[id];
+  if (!eventData) {
     return (
       <div className="text-center p-10">
         <h1 className="text-4xl font-bold text-red-600">
           Página no encontrada
         </h1>
-        <p className="mt-4">Lo sentimos, la tarjeta solicitada no existe.</p>
+        <p className="mt-4">Lo sentimos, el evento solicitado no existe.</p>
       </div>
     );
   }
@@ -32,37 +29,33 @@ export default async function LandingPage({ params }: Props) {
   return (
     <main className="min-h-screen w-full overflow-x-hidden py-2 space-y-8 bg-white">
       <div className="w-screen">
-        <FlipCard employeeData={employeeData} />
-      </div>
-      {/* <div className="w-screen">
-        <Header
-          name={employeeData.fullName}
-          profilePhotoUrl={employeeData.profilePhotoUrl}
-          company_description1={sharedCompanyData.company_description1}
-        />
-      </div> */}
-      <div className="w-screen">
-        <Portfolio
-    
-          company_description1={sharedCompanyData.company_description1}
-          whspUrl={employeeData.whspUrl}
-          facebookUrl={employeeData.facebookUrl}
-          emailUrl={employeeData.emailUrl}
-          instagramUrl={employeeData.instagramUrl}
-          phone={employeeData.phone}
-          youtubeUrl={employeeData.youtubeUrl}
-          companyLogo={sharedCompanyData.companyLogo}
+        <HeroSection 
+          groomName={eventData.groomName}
+          brideName={eventData.brideName}
+          eventDate={eventData.eventDate}
         />
       </div>
       <div className="w-screen">
-        <Company
-          company_description2={sharedCompanyData.company_description2}
-          address={sharedCompanyData.address}
+        <Countdown eventDate={eventData.eventDate} />
+      </div>
+      <div className="w-screen">
+        <EventDetails 
+          eventLocation={eventData.eventLocation}
+          eventTime={eventData.eventTime}
+          dressCode={eventData.dressCode}
+          ceremonyPlace={eventData.ceremonyPlace}
+          receptionPlace={eventData.receptionPlace}
+          message={eventData.message}
         />
       </div>
       <div className="w-screen">
-      <QRCodeRedirect employeeData={employeeData} id={id}/>
+        <RSVP 
+          whspUrl={eventData.whspUrl}
+          emailUrl={eventData.emailUrl}
+          phone={eventData.phone}
+        />
       </div>
+   
     </main>
   );
 }

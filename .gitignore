@@ -5,3 +5,8 @@ out/
 .env
 .DS_Store
 *.log
+out/index.txt
+out/index.html
+out/404.html
+out/index.txt
+out/index.html

@@ -1,6 +1,4 @@
-export { default as CardContainer } from './CardContainer';
-export { default as Portfolio } from './Portfolio';
-export { default as Header } from './Header';
-export { default as Company } from './Company';
-export {default as Network} from './Redes';
-export {default as QRCode} from './QRCode';
+export { default as Countdown } from './Countdown';
+export { default as EventDetails } from './EventDetails';
+export { default as HeroSection } from './HeroSection';
+export { default as RSVP } from './RSVP';
