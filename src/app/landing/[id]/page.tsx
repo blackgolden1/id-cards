@@ -3,17 +3,30 @@ import { landingData } from "@/lib/dummyData";
 import { Countdown, EventDetails, HeroSection, RSVP } from "@/components/landing";
 import '../../../styles/globals.css'; // Import global styles
 
+// type Props = {
+//   params: Promise<{ id: string }>;
+// };
+
+// export function generateStaticParams() {
+//   return Object.keys(landingData).map((id) => ({ id }));
+// }
+
+// export default async function LandingPage({ params }: Props) {
+//   const { id } = await params;
+
+//   const eventData = landingData[id];
 type Props = {
-  params: Promise<{ id: string }>;
+  params: { id: string };
 };
 
+// ✅ Generar las rutas estáticas según las keys de landingData
 export function generateStaticParams() {
   return Object.keys(landingData).map((id) => ({ id }));
 }
 
-export default async function LandingPage({ params }: Props) {
-  const { id } = await params;
-
+// ✅ Componente de página estática
+export default function LandingPage({ params }: Props) {
+  const { id } = params;
   const eventData = landingData[id];
   if (!eventData) {
     return (
