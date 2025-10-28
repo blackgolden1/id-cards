@@ -203,5 +203,22 @@ const landingData: Record<string, Employee> = {
     phone: "tel:+573173643058",
     youtubeUrl: "https://www.youtube.com/channel/UCh3N_GIgYNX5Qix4EQ6ZjKg",
   },
+      "eduardo-bocanegra-caviedes": {
+    firstName: "Eduardo",
+    lastName: "Bocanegra Caviedes",
+    rol: "Asesor Comercial Junior Sede GDT",
+    phoneCard: "3175754240",
+    email: "asesor9@edelco.co",
+    website: "https://edelco.co",
+
+  fullName: "Eduardo Bocanegra Caviedes",
+    profilePhotoUrl: "/Eduardo Bocanegra.jpg",
+    whspUrl: "https://wa.me/573175754240",
+    facebookUrl: "https://www.facebook.com/EDELCO.SAS/",
+    emailUrl: "mailto:asesor9@edelco.co",
+    instagramUrl: "https://www.instagram.com/edelcosas",
+    phone: "tel:+573175754240",
+    youtubeUrl: "https://www.youtube.com/channel/UCh3N_GIgYNX5Qix4EQ6ZjKg",
+  },
 };
 export default landingData;
