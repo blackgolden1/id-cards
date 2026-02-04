@@ -220,5 +220,22 @@ const landingData: Record<string, Employee> = {
     phone: "tel:+573175754240",
     youtubeUrl: "https://www.youtube.com/channel/UCh3N_GIgYNX5Qix4EQ6ZjKg",
   },
+      "john-edison-gomez-ochoa": {
+    firstName: "John Edison",
+    lastName: "Gomez Ochoa",
+    rol: "Asesor Comercial Externo Sede IBG",
+    phoneCard: "3162676764",
+    email: "asesor3@edelco.co",
+    website: "https://edelco.co",
+
+  fullName: "John Edison Gomez Ochoa",
+    profilePhotoUrl: "/John Edison Gomez.jpg",
+    whspUrl: "https://wa.me/573162676764",
+    facebookUrl: "https://www.facebook.com/EDELCO.SAS/",
+    emailUrl: "mailto:asesor3@edelco.co",
+    instagramUrl: "https://www.instagram.com/edelcosas",
+    phone: "tel:+573162676764",
+    youtubeUrl: "https://www.youtube.com/channel/UCh3N_GIgYNX5Qix4EQ6ZjKg",
+  },
 };
 export default landingData;
