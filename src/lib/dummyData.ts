@@ -169,7 +169,7 @@ const landingData: Record<string, Employee> = {
     youtubeUrl: "https://www.youtube.com/channel/UCh3N_GIgYNX5Qix4EQ6ZjKg",
   },
 
-      "arnulfo-gonzalez-londono": {
+      "arnulfo-gonzalez-londono": {  
     firstName: "Arnulfo",
     lastName: "González Londoño",
     rol: "Asesor Construcción Semi Senior",
