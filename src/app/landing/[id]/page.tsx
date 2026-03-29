@@ -1,44 +1,68 @@
-// app/landing/[id]/page.tsx
 
-import {landingData} from '@/lib/dummyData';
-import {notFound} from 'next/navigation';
-import {Header, Company, Portfolio, CardContainer} from '@/components/landing';
+import landingData, { sharedCompanyData } from "@/lib/dummyData";
+import { Employee } from "@/types/Employee";
+import {Company, Portfolio, } from "@/components/landing";
+import QRCodeRedirect from "@/components/landing/QRCodeRedirect";
+import FlipCard from '@/components/landing/FlipCard';
+import '../../../styles/globals.css'; // Import global styles
+// ...existing code...
+type Props = {
+  params: Promise<{ id: string }>;
+};
 
-interface Props {
-    params: { id: string };
+export function generateStaticParams() {
+  return Object.keys(landingData).map((id) => ({ id }));
 }
 
-export default function LandingPage({params}: Props) {
-    const data = landingData[params.id];
+export default async function LandingPage({ params }: Props) {
+  const { id } = await params;
 
-    if (!data) return notFound();
-
+  const employeeData: Employee | undefined = landingData[id];
+  if (!employeeData) {
     return (
-        <main className="min-h-screen w-full overflow-x-hidden  py-6 space-y-8">
-            <div className="w-screen  ">
-                <Header name={data.fullName} profilePhotoUrl={data.profilePhotoUrl}
-                        company_description1={data.company_description1}/>
-            </div>
-            <div className="w-screen  "><Portfolio whspUrl={data.whspUrl}
-                                                                 facebookUrl={data.facebookUrl}
-                                                                 emailUrl={data.emailUrl}
-                                                                 instagramUrl={data.instagramUrl}
-                                                                 phone={data.phone} youtubeUrl={data.youtubeUrl}
-                                                                 companyLogo={data.companyLogo}/></div>
-            <div className="w-screen  "><Company company_description2={data.company_description2}
-                                                               address={data.address} image1={data.image1}
-                                                               image2={data.image2} image3={data.image3}
-                                                               image4={data.image4}/></div>
-            <div className="w-screen  "><CardContainer
-                profilePhotoUrl={data.profilePhotoUrl}
-                firstName={data.firstName}
-                lastName={data.lastName}
-                phone={data.phoneCard}
-                email={data.email}
-                organization={data.organization}
-                website={data.website}
-            /></div>
-
-        </main>
+      <div className="text-center p-10">
+        <h1 className="text-4xl font-bold text-red-600">
+          Página no encontrada
+        </h1>
+        <p className="mt-4">Lo sentimos, la tarjeta solicitada no existe.</p>
+      </div>
     );
+  }
+
+  return (
+    <main className="min-h-screen w-full overflow-x-hidden py-2 space-y-8 bg-white">
+      <div className="w-screen">
+        <FlipCard employeeData={employeeData} />
+      </div>
+      {/* <div className="w-screen">
+        <Header
+          name={employeeData.fullName}
+          profilePhotoUrl={employeeData.profilePhotoUrl}
+          company_description1={sharedCompanyData.company_description1}
+        />
+      </div> */}
+      <div className="w-screen">
+        <Portfolio
+    
+          company_description1={sharedCompanyData.company_description1}
+          whspUrl={employeeData.whspUrl}
+          facebookUrl={employeeData.facebookUrl}
+          emailUrl={employeeData.emailUrl}
+          instagramUrl={employeeData.instagramUrl}
+          phone={employeeData.phone}
+          youtubeUrl={employeeData.youtubeUrl}
+          companyLogo={sharedCompanyData.companyLogo}
+        />
+      </div>
+      <div className="w-screen">
+        <Company
+          company_description2={sharedCompanyData.company_description2}
+          address={sharedCompanyData.address}
+        />
+      </div>
+      <div className="w-screen">
+      <QRCodeRedirect employeeData={employeeData} id={id}/>
+      </div>
+    </main>
+  );
 }
