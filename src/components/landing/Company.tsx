@@ -2,6 +2,7 @@
 interface AboutProps {
   company_description2: string;
   address: Address[];
+  
 }
 
 interface Address {
@@ -39,10 +40,10 @@ export default function Company({ address, company_description2 }: AboutProps) {
           </ul>
         </div>
         <div className="flex md:h-[25rem] gap-1 bg-white pt-1 h-[10rem] 2xl:h-[43rem]">
-          <img className="w-1/4" src="/image1.jpg" alt="" />
-          <img className="w-1/4" src="/image2.jpg" alt="" />
-          <img className="w-1/4" src="/image3.jpg" alt="" />
-          <img className="w-1/4" src="/image4.jpg" alt="" />
+          <img className="w-1/4" src="/edelco/image1.jpg" alt="" />
+          <img className="w-1/4" src="/edelco/image2.jpg" alt="" />
+          <img className="w-1/4" src="/edelco/image3.jpg" alt="" />
+          <img className="w-1/4" src="/edelco/image4.jpg" alt="" />
         </div>
       </div>
      

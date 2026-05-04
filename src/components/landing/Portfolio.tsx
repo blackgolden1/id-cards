@@ -24,12 +24,12 @@ export default function Portfolio({
   companyLogo,
 }: Project) {
   const networks = [
-    { name: "WhatsApp", url: whspUrl, icon: "/network/whatsapp (2).png" },
-    { name: "Facebook", url: facebookUrl, icon: "/network/facebook.png" },
-    { name: "Correo", url: emailUrl, icon: "/network/mensaje.png" },
-    { name: "Instagram", url: instagramUrl, icon: "/network/instagram.png" },
-    { name: "Teléfono", url: phone, icon: "/network/llamada-telefonica.png" },
-    { name: "YouTube", url: youtubeUrl, icon: "/network/youtube (2).png" },
+    { name: "WhatsApp", url: whspUrl, icon: "/edelco/social/whatsapp (2).png" },
+    { name: "Facebook", url: facebookUrl, icon: "/edelco/social/facebook.png" },
+    { name: "Correo", url: emailUrl, icon: "/edelco/social/mensaje.png" },
+    { name: "Instagram", url: instagramUrl, icon: "/edelco/social/instagram.png" },
+    { name: "Teléfono", url: phone, icon: "/edelco/social/llamada-telefonica.png" },
+    { name: "YouTube", url: youtubeUrl, icon: "/edelco/social/youtube (2).png" },
   ];
 
   return (

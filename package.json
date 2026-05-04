@@ -1,6 +1,6 @@
 {
-  "name": "id-cards",
-  "version": "0.1.0",
+  "name": "bg-cards",
+  "version": "1.0.1-edelco",
   "private": true,
   "scripts": {
     "dev": "next dev",

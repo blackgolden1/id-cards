@@ -2,7 +2,7 @@
 import { Employee } from "@/types/Employee";
 
 export const sharedCompanyData = {
-  companyLogo: "/logo.png",
+  companyLogo: "/edelco/logo.png",
   company_description1:
     "Edelco SAS con una trayectoria de 15 años es una compañía dedicada a la comercialización de materiales eléctricos para la industria, construcción, " +
     "institucional, subdistribución y el hogar, logrando una posición reconocida en el mercado a nivel nacional con productos de alta calidad, precios competitivos y un excelente" +
@@ -30,10 +30,10 @@ export const sharedCompanyData = {
       description: "Calle 22 # 8A – 70 B/Santander - PBX:(601) 888 49 03",
     }
   ],
-  image1: "/image1.jpg",
-  image2: "/image2.jpg",
-  image3: "/image3.jpg",
-  image4: "/image4.jpg",
+  image1: "/edelco/image1.jpg",
+  image2: "/edelco/image2.jpg",
+  image3: "/edelco/image3.jpg",
+  image4: "/edelco/image4.jpg",
 };
 const landingData: Record<string, Employee> = {
 
@@ -46,7 +46,7 @@ const landingData: Record<string, Employee> = {
     website: "https://edelco.co",
 
     fullName: "Freddy Castañeda Segura",
-    profilePhotoUrl: "/Freddy Castaneda.jpg",
+    profilePhotoUrl: "/edelco/profiles/Freddy Castaneda.jpg",
     whspUrl: "https://wa.me/573172929315",
     facebookUrl: "https://www.facebook.com/EDELCO.SAS/",
     emailUrl: "mailto:gerencia@edelco.co",
@@ -64,7 +64,7 @@ const landingData: Record<string, Employee> = {
     website: "https://edelco.co",
 
     fullName: "Leidy Flórez Rodríguez",
-    profilePhotoUrl: "/Leidy Florez Rodriguez.jpg",
+    profilePhotoUrl: "/edelco/profiles/Leidy Florez Rodriguez.jpg",
     whspUrl: "https://wa.me/573175705681",
     facebookUrl: "https://www.facebook.com/EDELCO.SAS/",
     emailUrl: "mailto:asistentecomercialibague@edelco.co",
@@ -82,7 +82,7 @@ const landingData: Record<string, Employee> = {
     website: "https://edelco.co",
 
     fullName: "Janeth Rojas López",
-    profilePhotoUrl: "/Janeth Rojas Lopez.jpg",
+    profilePhotoUrl: "/edelco/profiles/Janeth Rojas Lopez.jpg",
     whspUrl: "https://edelco.co",
     facebookUrl: "https://www.facebook.com/EDELCO.SAS/",
     emailUrl: "mailto:asistentecomercialgirardot@edelco.co",
@@ -100,7 +100,7 @@ const landingData: Record<string, Employee> = {
     website: "https://edelco.co",
 
     fullName: "Arnulfo González Londoño",
-    profilePhotoUrl: "/Arnulfo Gonzales Londono.jpg",
+    profilePhotoUrl: "/edelco/profiles/Arnulfo Gonzales Londono.jpg",
     whspUrl: "https://wa.me/573183546690",
     facebookUrl: "https://www.facebook.com/EDELCO.SAS/",
     emailUrl: "mailto:asesorconstruccion@edelco.co",
@@ -118,7 +118,7 @@ const landingData: Record<string, Employee> = {
     website: "https://edelco.co",
 
     fullName: "Eduardo Bocanegra Caviedes",
-    profilePhotoUrl: "/Eduardo Bocanegra.jpg",
+    profilePhotoUrl: "/edelco/profiles/Eduardo Bocanegra.jpg",
     whspUrl: "https://wa.me/573175754240",
     facebookUrl: "https://www.facebook.com/EDELCO.SAS/",
     emailUrl: "mailto:asesor9@edelco.co",
@@ -136,13 +136,32 @@ const landingData: Record<string, Employee> = {
     website: "https://edelco.co",
 
     fullName: "John Edison Gomez Ochoa",
-    profilePhotoUrl: "/John Edison Gomez.jpg",
+    profilePhotoUrl: "/edelco/profiles/John Edison Gomez.jpg",
     whspUrl: "https://wa.me/573162676764",
     facebookUrl: "https://www.facebook.com/EDELCO.SAS/",
     emailUrl: "mailto:asesor3@edelco.co",
     instagramUrl: "https://www.instagram.com/edelcosas",
     phone: "tel:+573162676764",
     youtubeUrl: "https://www.youtube.com/channel/UCh3N_GIgYNX5Qix4EQ6ZjKg",
+  },
+
+  "juan-carlos-patino": {
+    firstName: "Juan Carlos",
+    lastName: " Patiño",
+    rol: "Coordinador Comercial y Administrativo Sede BTA",
+    phoneCard: "3163909501",
+    email: "ccomercialbogota@edelco.co",
+    website: "https://edelco.co",
+
+    fullName: "Juan Carlos Patiño",
+    profilePhotoUrl: "/edelco/profiles/Juan Carlos Patiño.png",
+    whspUrl: "https://wa.me/573163909501",
+    facebookUrl: "https://www.facebook.com/EDELCO.SAS/",
+    emailUrl: "mailto:ccomercialbogota@edelco.co",
+    instagramUrl: "https://www.instagram.com/edelcosas",
+    phone: "tel:+573163909501",
+    youtubeUrl: "https://www.youtube.com/channel/UCh3N_GIgYNX5Qix4EQ6ZjKg",
   }
+
 };
 export default landingData;
